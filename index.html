@@ -147,10 +147,8 @@ const form = document.getElementById('claimForm');
 form.addEventListener('submit', event => {
   event.preventDefault();
   const name = document.getElementById('fullName').value.trim();
-  const reason = document.getElementById('reason').value.trim();
   if (!name) return;
-  const message = 'Здравствуйте! Я, ' + name + ', написала за сертификатом. ' + reason;
-  window.open(CHAT_URL + '?text=' + encodeURIComponent(message), '_blank', 'noopener');
+  window.open(CHAT_URL, '_blank', 'noopener');
 });
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
