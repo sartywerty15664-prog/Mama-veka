@@ -36,7 +36,7 @@ document.getElementById('claimForm').addEventListener('submit', event => {
   event.preventDefault();
   const name = document.getElementById('fullName').value.trim();
   const reason = document.getElementById('reason').value.trim();
-  const message = 'Здравствуйте, я за сертификатом.\n\nМоё ФИО: ' + name + '\nПочему я достойна этой награды: ' + reason;
+  const message = 'Здравствуйте! Я, ' + name + ', написала за сертификатом. ' + reason;
   window.open(CHAT_URL + '?text=' + encodeURIComponent(message), '_blank', 'noopener');
 });
 </script>
