@@ -133,16 +133,57 @@ textarea{min-height:118px}
 }
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 
+
+/* Signature ceremony details */
+.hero{isolation:isolate}
+.hero:after{z-index:-1}
+.hero-medal{width:112px;height:112px;border:1px solid #d9bd83;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#e8d4a9;position:relative;margin:0 auto 8px;box-shadow:0 0 0 8px #d9bd8310,0 0 0 17px #d9bd8309,0 0 35px #d9bd8320}
+.hero-medal:before,.hero-medal:after{content:"";position:absolute;inset:8px;border:1px solid #d9bd8366;border-radius:50%}
+.hero-medal:after{inset:-9px;border-style:dashed;opacity:.5}
+.hero-medal span{font-size:1.05rem;color:#e8d4a9;line-height:1}
+.hero-medal b{font:600 .58rem/1.35 system-ui;letter-spacing:.18em;text-align:center}
+.hero-caption{margin-top:24px;color:#d9bd83;font:italic 1.05rem Georgia,serif;letter-spacing:.04em}
+.hero-bottom{display:flex;align-items:center;gap:13px}
+.hero-bottom span{width:24px;height:1px;background:#d9bd8380}
+.love-note{position:relative;margin:48px auto 0;padding:38px 28px 30px;max-width:570px;text-align:center;border-top:1px solid #c5a36b77;border-bottom:1px solid #c5a36b77}
+.love-note:before,.love-note:after{content:"✦";position:absolute;top:-11px;color:#b28a50;background:#f8f4eb;padding:0 12px;font-size:.8rem}
+.love-note:before{left:18px}.love-note:after{right:18px}
+.love-note-mark{display:block;color:#b28a50;font:4rem/.7 Georgia,serif;opacity:.65}
+.love-note p{font:italic clamp(1.35rem,3.8vw,1.8rem)/1.45 Georgia,serif;color:#294536;margin:12px auto 18px}
+.love-note-sign{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#9a7a4b}
+.certificate-seal{width:128px;height:128px;margin:0 auto 26px;border:1px solid #d9bd83;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#e8d4a9;position:relative;box-shadow:0 0 0 8px #d9bd830d,0 0 0 16px #d9bd8308}
+.certificate-seal:before{content:"";position:absolute;inset:8px;border:1px dashed #d9bd8399;border-radius:50%}
+.certificate-seal span{font-size:1rem;line-height:1}
+.certificate-seal b{font:600 .78rem/1.35 Georgia,serif;letter-spacing:.16em;text-align:center}
+.award{border:1px solid #b89a65;box-shadow:0 25px 80px #10271e55,inset 0 0 0 8px #ffffff08}
+.award:after{content:"";position:absolute;inset:14px;border:1px solid #d9bd8338;border-radius:3px 3px 58px 3px;pointer-events:none}
+.award-head,.award form,.award .signature,.award .rule{position:relative;z-index:1}
+.story-card{transition:transform .35s ease,box-shadow .35s ease}
+.story-card:hover{transform:translateY(-5px);box-shadow:0 16px 35px #25382d13}
+.btn{position:relative;overflow:hidden}
+.btn:before{content:"";position:absolute;top:-70%;left:-30%;width:18%;height:240%;background:#ffffff70;transform:rotate(25deg);transition:left .6s ease}
+.btn:hover:before{left:115%}
+@media(max-width:560px){
+ .hero-medal{width:94px;height:94px}
+ .hero-caption{font-size:.98rem}
+ .love-note{padding:32px 18px 26px;margin-top:38px}
+ .certificate-seal{width:112px;height:112px}
+ .award:after{inset:9px;border-radius:3px 3px 40px 3px}
+}
+@media(hover:none){.story-card:hover{transform:none;box-shadow:0 8px 24px #25382d08}}
+
 </style>
 </head>
 <body>
 <main>
 <section class="hero">
   <div class="eyebrow">Для самого важного человека</div>
-  <div class="ornament" aria-hidden="true">✦ ♡ ✦</div>
+  <div class="hero-medal" aria-hidden="true"><span>✦</span><b>№ 001</b><span>♡</span></div>
+  <div class="ornament" aria-hidden="true">✦ · ♡ · ✦</div>
   <h1>Мама<span>Века</span></h1>
+  <div class="hero-caption">Главное звание — быть любимой</div>
   <p class="hero-copy">Есть награды, которые не измеряются медалями. Они — про любовь, терпение, заботу и человека, который всегда остаётся особенным.</p>
-  <div class="hero-bottom">Одна особенная история</div>
+  <div class="hero-bottom"><span></span> Одна особенная история <span></span></div>
   <a class="scroll-cue" href="#story"><span>↓</span> Здесь кое-что приготовлено для тебя</a>
 </section>
 
@@ -177,6 +218,7 @@ textarea{min-height:118px}
       </article>
     </div>
     <p class="story-end">Это не попытка перечислить всё, что ты делаешь. <strong>Это маленький способ показать, как сильно я тебя ценю.</strong></p>
+    <div class="love-note reveal"><span class="love-note-mark">“</span><p>Некоторые люди делают дом домом. Для меня таким человеком всегда была ты.</p><span class="love-note-sign">С любовью ♡</span></div>
   </div>
 </section>
 
@@ -190,8 +232,8 @@ textarea{min-height:118px}
   </div>
   <section class="award reveal delay-1">
     <div class="award-head">
-      <div class="award-symbol" aria-hidden="true">✧ ♡ ✧</div>
-      <div class="eyebrow">Особое признание</div>
+      <div class="certificate-seal" aria-hidden="true"><span>✦</span><b>МАМА<br>ВЕКА</b><span>♡</span></div>
+      <div class="eyebrow">Особое признание · 2026</div>
       <h2>Сертификат<br>«Мама Века»</h2>
       <p class="award-sub">В знак любви, благодарности и признательности за все годы заботы, терпения и тепла.</p>
     </div>
