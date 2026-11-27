@@ -3,42 +3,169 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#280d1b">
-<title>Получение сертификата «Мама Века»</title>
+<meta name="theme-color" content="#160912">
+<meta name="description" content="Особенная награда для самой важной мамы.">
+<title>Мама Века — особенная награда</title>
 <style>
-:root{color-scheme:dark;--bg:#170a12;--card:#29111f;--rose:#f6a8c5;--cream:#fff0e7;--muted:#d6b8c5}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#54243b 0,transparent 55%),var(--bg);color:var(--cream);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px}
-main{width:min(650px,100%)}.panel{background:linear-gradient(145deg,#321729,#21101a);border:1px solid #63334d;border-radius:28px;padding:clamp(24px,6vw,48px);box-shadow:0 24px 80px #0004}.eyebrow{text-align:center;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);font-size:.76rem}.flower{text-align:center;font-size:2.4rem;margin:14px 0}.title{text-align:center;font:400 clamp(2.2rem,7vw,3.8rem)/1.05 Georgia,serif;margin:12px 0;color:var(--cream)}.intro{text-align:center;color:var(--muted);max-width:480px;margin:18px auto 28px}.rule{height:1px;background:#63334d;margin:26px 0}label{display:block;margin:18px 0 7px;color:var(--rose)}input,textarea{width:100%;border:1px solid #6b3b53;border-radius:13px;background:#1a0b14;color:var(--cream);padding:14px;font:inherit;outline:none}textarea{min-height:110px;resize:none;opacity:.9}input:focus,textarea:focus{border-color:var(--rose);box-shadow:0 0 0 3px #f6a8c522}.btn{display:block;width:100%;border:0;border-radius:999px;padding:15px 20px;color:#260e1b;background:var(--rose);font:700 1rem system-ui;cursor:pointer;text-align:center;text-decoration:none;margin-top:24px}.note{text-align:center;color:#b996a8;font-size:.85rem;margin:16px 0 0}.footer{text-align:center;color:#a98598;font-size:.8rem;margin-top:22px}
+:root{color-scheme:dark;--bg:#160912;--panel:#24111d;--panel2:#301827;--rose:#f3a5c2;--rose2:#ffd1df;--cream:#fff2e9;--muted:#c9aeb9;--line:#684052;--gold:#e7c9a2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,#67324b 0,transparent 42%),radial-gradient(ellipse at 0 55%,#321426 0,transparent 35%),var(--bg);color:var(--cream);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:radial-gradient(#fff 0.65px,transparent .65px);background-size:27px 27px;mask-image:linear-gradient(to bottom,#000,transparent 80%);z-index:-1}
+main{width:min(760px,100%);margin:0 auto;padding:24px 18px 54px}
+.hero,.story,.award{position:relative;overflow:hidden;border:1px solid #704357;background:linear-gradient(145deg,rgba(54,27,44,.96),rgba(30,14,24,.97));border-radius:30px;box-shadow:0 28px 90px #0005}
+.hero{min-height:690px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:clamp(34px,8vw,76px) clamp(22px,7vw,62px)}
+.hero:before,.award:before{content:"";position:absolute;width:360px;height:360px;border:1px solid #f3a5c21c;border-radius:50%;top:-235px;right:-170px;box-shadow:0 0 0 25px #f3a5c209,0 0 0 55px #f3a5c206}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-weight:650}
+.ornament{color:var(--gold);font:2.6rem Georgia,serif;letter-spacing:.2em;margin:28px 0 18px}
+h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+h1{font-size:clamp(3rem,10vw,5.7rem);line-height:.98;letter-spacing:-.045em;margin:0;color:var(--cream)}
+h1 span{display:block;color:var(--rose2);font-style:italic;font-size:.78em;margin-top:12px}
+.hero-copy{max-width:510px;color:var(--muted);font-size:clamp(1rem,2.7vw,1.18rem);margin:30px auto 0}
+.hero-bottom{margin-top:54px;color:#d8b8c5;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase}
+.scroll-cue{display:inline-flex;align-items:center;gap:12px;color:var(--rose);text-decoration:none;margin-top:12px;font-size:.9rem;letter-spacing:0;text-transform:none}
+.scroll-cue span{display:grid;place-items:center;width:34px;height:34px;border:1px solid #f3a5c277;border-radius:50%;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+.section{padding:88px 0 22px}
+.section-kicker{text-align:center;color:var(--rose);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+.section-title{text-align:center;font-size:clamp(2.2rem,7vw,3.5rem);line-height:1.08;margin:14px auto 18px;max-width:620px}
+.section-intro{text-align:center;color:var(--muted);max-width:570px;margin:0 auto 34px}
+.story{padding:clamp(26px,6vw,48px);background:linear-gradient(145deg,rgba(43,22,35,.95),rgba(27,13,22,.96))}
+.story-lead{font:italic clamp(1.45rem,4vw,2rem)/1.35 Georgia,serif;color:var(--rose2);text-align:center;margin:0 auto 30px;max-width:560px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.story-card{padding:22px;border:1px solid #70435780;border-radius:19px;background:#ffffff05}
+.story-card .number{font:1.65rem Georgia,serif;color:var(--gold)}
+.story-card h3{font-size:1rem;color:var(--rose2);font-weight:600;margin:8px 0}
+.story-card p{color:var(--muted);font-size:.92rem;margin:0}
+.story-end{color:var(--muted);text-align:center;max-width:550px;margin:30px auto 0}
+.story-end strong{color:var(--cream);font-weight:600}
+.divider{display:flex;align-items:center;gap:16px;color:var(--gold);margin:58px 0 10px}
+.divider:before,.divider:after{content:"";height:1px;background:linear-gradient(90deg,transparent,#704357);flex:1}
+.divider:after{transform:scaleX(-1)}
+.award{padding:clamp(28px,7vw,54px);background:linear-gradient(150deg,#382033,#21101b)}
+.award-head{text-align:center;position:relative}
+.award-symbol{font-size:2rem;color:var(--gold);margin-bottom:12px}
+.award h2{font-size:clamp(2.5rem,8vw,4.4rem);line-height:1.02;margin:0}
+.award-sub{color:var(--muted);max-width:470px;margin:20px auto 34px}
+.rule{height:1px;background:linear-gradient(90deg,transparent,#80536a,transparent);margin:28px 0}
+label{display:block;margin:20px 0 8px;color:var(--rose2);font-weight:550}
+input,textarea{width:100%;border:1px solid #80536a;border-radius:15px;background:#190b14;color:var(--cream);padding:16px;font:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
+input{min-height:60px}
+textarea{min-height:112px;resize:none;opacity:.94;line-height:1.65}
+input::placeholder{color:#947887}
+input:focus,textarea:focus{border-color:var(--rose);box-shadow:0 0 0 4px #f3a5c21c}
+.btn{display:block;width:100%;border:0;border-radius:999px;padding:18px 22px;color:#2a1020;background:linear-gradient(110deg,#f7b3cd,#ffd4df);font:700 1.05rem system-ui;cursor:pointer;text-align:center;text-decoration:none;margin-top:28px;box-shadow:0 10px 32px #e98bad25;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 15px 38px #e98bad38}
+.btn:active{transform:translateY(0)}
+.note{text-align:center;color:#c5a5b4;font-size:.88rem;margin:17px 0 0}
+.signature{text-align:center;font:italic 1.2rem Georgia,serif;color:var(--rose2);margin:36px 0 0}
+.footer{text-align:center;color:#a98598;font-size:.8rem;margin:28px 0 0}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.delay-1{transition-delay:.12s}.delay-2{transition-delay:.22s}.delay-3{transition-delay:.32s}
+@media(max-width:560px){main{padding:12px 12px 36px}.hero{min-height:620px;border-radius:24px}.story-grid{grid-template-columns:1fr}.section{padding-top:68px}.story,.award{border-radius:24px}.story-card{padding:19px}.hero-bottom{margin-top:42px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <main>
-<section class="panel">
-<div class="eyebrow">Официальная страница получения</div>
-<div class="flower" aria-hidden="true">✦ ♡ ✦</div>
-<h1 class="title">Сертификат<br>«Мама Века»</h1>
-<p class="intro">Введите ФИО и нажмите кнопку, чтобы написать мне за сертификатом. Сообщение будет подготовлено автоматически.</p>
-<div class="rule"></div>
-<form id="claimForm">
-<label for="fullName">Ваше ФИО</label>
-<input id="fullName" name="fullName" autocomplete="name" placeholder="Введите ваше ФИО" required maxlength="120">
-<label for="reason">Почему вы достойны этой награды?</label>
-<textarea id="reason" name="reason" readonly aria-readonly="true">Тебе не надо это заполнять, потому что ты и так уже всем всё доказала. ♡</textarea>
-<button class="btn" type="submit">Написать за наградой ♡</button>
-<p class="note">После нажатия откроется чат со мной. Сертификат отправлю лично.</p>
-</form>
+<section class="hero">
+  <div class="eyebrow">Для самого важного человека</div>
+  <div class="ornament" aria-hidden="true">✦ ♡ ✦</div>
+  <h1>Мама<span>Века</span></h1>
+  <p class="hero-copy">Есть награды, которые не измеряются медалями. Они — про любовь, терпение, заботу и человека, который всегда остаётся особенным.</p>
+  <div class="hero-bottom">Одна особенная история</div>
+  <a class="scroll-cue" href="#story"><span>↓</span> Здесь кое-что приготовлено для тебя</a>
 </section>
-<div class="footer">Сделано с любовью ♡</div>
+
+<section class="section" id="story">
+  <div class="reveal">
+    <div class="section-kicker">Немного перед главным</div>
+    <h2 class="section-title">За этой страницей —<br>не просто несколько строк</h2>
+    <p class="section-intro">Мне хотелось, чтобы у этой награды было своё маленькое событие. Не просто вручить сертификат, а сначала напомнить, почему он вообще появился.</p>
+  </div>
+  <div class="story reveal delay-1">
+    <p class="story-lead">«Потому что сказать обычное “спасибо” — слишком мало».</p>
+    <div class="story-grid">
+      <article class="story-card reveal">
+        <div class="number">01</div>
+        <h3>Сначала была идея</h3>
+        <p>Я хотел придумать для тебя что-то необычное — такое, что вызовет улыбку и останется в памяти.</p>
+      </article>
+      <article class="story-card reveal delay-1">
+        <div class="number">02</div>
+        <h3>Потом — внимание к деталям</h3>
+        <p>Мы продумывали оформление, слова и саму страницу, чтобы всё выглядело по-особенному и было понятно с первого взгляда.</p>
+      </article>
+      <article class="story-card reveal delay-2">
+        <div class="number">03</div>
+        <h3>Каждая мелочь — с мыслью о тебе</h3>
+        <p>Цвета, надписи и даже маленькое сердечко здесь не случайны. Хотелось передать тепло, которое трудно уместить в текст.</p>
+      </article>
+      <article class="story-card reveal delay-3">
+        <div class="number">04</div>
+        <h3>И вот настал этот момент</h3>
+        <p>Осталось только получить свою награду. Хотя, если честно, ты заслужила её задолго до появления этой страницы.</p>
+      </article>
+    </div>
+    <p class="story-end">Это не попытка перечислить всё, что ты делаешь. <strong>Это маленький способ показать, как сильно я тебя ценю.</strong></p>
+  </div>
+</section>
+
+<div class="divider reveal" aria-hidden="true">♡</div>
+
+<section class="section" id="award">
+  <div class="reveal">
+    <div class="section-kicker">И наконец — самое главное</div>
+    <h2 class="section-title">Твоя награда<br>уже ждёт тебя</h2>
+    <p class="section-intro">Остался один небольшой шаг. Заполни только своё имя — сообщение для меня подготовится само.</p>
+  </div>
+  <section class="award reveal delay-1">
+    <div class="award-head">
+      <div class="award-symbol" aria-hidden="true">✧ ♡ ✧</div>
+      <div class="eyebrow">Особое признание</div>
+      <h2>Сертификат<br>«Мама Века»</h2>
+      <p class="award-sub">В знак любви, благодарности и признательности за все годы заботы, терпения и тепла.</p>
+    </div>
+    <div class="rule"></div>
+    <form id="claimForm">
+      <label for="fullName">Ваше ФИО</label>
+      <input id="fullName" name="fullName" autocomplete="name" placeholder="Введите ваше ФИО" required maxlength="120">
+      <label for="reason">Почему вы достойны этой награды?</label>
+      <textarea id="reason" name="reason" readonly aria-readonly="true">Тебе не надо это заполнять, потому что ты и так уже всем всё доказала. ♡</textarea>
+      <button class="btn" type="submit">Написать за наградой ♡</button>
+      <p class="note">После нажатия откроется чат со мной. Сертификат отправлю лично.</p>
+    </form>
+    <p class="signature">С любовью и благодарностью от твоего дорогого сына ♡</p>
+  </section>
+</section>
+<div class="footer">Создано с любовью. Для тебя — и только для тебя. ♡</div>
 </main>
 <script>
 const CHAT_URL = 'https://t.me/agetyperowner';
-document.getElementById('claimForm').addEventListener('submit', event => {
+const form = document.getElementById('claimForm');
+form.addEventListener('submit', event => {
   event.preventDefault();
   const name = document.getElementById('fullName').value.trim();
   const reason = document.getElementById('reason').value.trim();
+  if (!name) return;
   const message = 'Здравствуйте! Я, ' + name + ', написала за сертификатом. ' + reason;
   window.open(CHAT_URL + '?text=' + encodeURIComponent(message), '_blank', 'noopener');
 });
+const revealItems = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        currentObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.14, rootMargin:'0px 0px -35px 0px'});
+  revealItems.forEach(item => observer.observe(item));
+} else {
+  revealItems.forEach(item => item.classList.add('visible'));
+}
 </script>
 </body>
 </html>
