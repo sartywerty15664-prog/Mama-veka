@@ -8,7 +8,7 @@
 <style>
 :root{color-scheme:dark;--bg:#170a12;--card:#29111f;--rose:#f6a8c5;--cream:#fff0e7;--muted:#d6b8c5}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#54243b 0,transparent 55%),var(--bg);color:var(--cream);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px}
-main{width:min(650px,100%)}.panel{background:linear-gradient(145deg,#321729,#21101a);border:1px solid #63334d;border-radius:28px;padding:clamp(24px,6vw,48px);box-shadow:0 24px 80px #0004}.eyebrow{text-align:center;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);font-size:.76rem}.flower{text-align:center;font-size:2.4rem;margin:14px 0}.title{text-align:center;font:400 clamp(2.2rem,7vw,3.8rem)/1.05 Georgia,serif;margin:12px 0;color:var(--cream)}.intro{text-align:center;color:var(--muted);max-width:480px;margin:18px auto 28px}.rule{height:1px;background:#63334d;margin:26px 0}label{display:block;margin:18px 0 7px;color:var(--rose)}input,textarea{width:100%;border:1px solid #6b3b53;border-radius:13px;background:#1a0b14;color:var(--cream);padding:14px;font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--rose);box-shadow:0 0 0 3px #f6a8c522}textarea{min-height:140px;resize:vertical}.btn{display:block;width:100%;border:0;border-radius:999px;padding:15px 20px;color:#260e1b;background:var(--rose);font:700 1rem system-ui;cursor:pointer;text-align:center;text-decoration:none;margin-top:24px}.note{text-align:center;color:#b996a8;font-size:.85rem;margin:16px 0 0}.footer{text-align:center;color:#a98598;font-size:.8rem;margin-top:22px}
+main{width:min(650px,100%)}.panel{background:linear-gradient(145deg,#321729,#21101a);border:1px solid #63334d;border-radius:28px;padding:clamp(24px,6vw,48px);box-shadow:0 24px 80px #0004}.eyebrow{text-align:center;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);font-size:.76rem}.flower{text-align:center;font-size:2.4rem;margin:14px 0}.title{text-align:center;font:400 clamp(2.2rem,7vw,3.8rem)/1.05 Georgia,serif;margin:12px 0;color:var(--cream)}.intro{text-align:center;color:var(--muted);max-width:480px;margin:18px auto 28px}.rule{height:1px;background:#63334d;margin:26px 0}label{display:block;margin:18px 0 7px;color:var(--rose)}input{width:100%;border:1px solid #6b3b53;border-radius:13px;background:#1a0b14;color:var(--cream);padding:14px;font:inherit;outline:none}input:focus{border-color:var(--rose);box-shadow:0 0 0 3px #f6a8c522}.btn{display:block;width:100%;border:0;border-radius:999px;padding:15px 20px;color:#260e1b;background:var(--rose);font:700 1rem system-ui;cursor:pointer;text-align:center;text-decoration:none;margin-top:24px}.note{text-align:center;color:#b996a8;font-size:.85rem;margin:16px 0 0}.footer{text-align:center;color:#a98598;font-size:.8rem;margin-top:22px}
 </style>
 </head>
 <body>
@@ -17,13 +17,11 @@ main{width:min(650px,100%)}.panel{background:linear-gradient(145deg,#321729,#211
 <div class="eyebrow">Официальная страница получения</div>
 <div class="flower" aria-hidden="true">✦ ♡ ✦</div>
 <h1 class="title">Сертификат<br>«Мама Века»</h1>
-<p class="intro">Чтобы получить свой сертификат, заполните форму ниже. После этого нажмите кнопку и напишите мне в чат — ваше сообщение уже будет подготовлено.</p>
+<p class="intro">Введите ФИО и нажмите кнопку, чтобы написать мне за сертификатом. Сообщение будет подготовлено автоматически.</p>
 <div class="rule"></div>
 <form id="claimForm">
 <label for="fullName">Ваше ФИО</label>
 <input id="fullName" name="fullName" autocomplete="name" placeholder="Введите ваше ФИО" required maxlength="120">
-<label for="reason">Почему вы достойны этой награды?</label>
-<textarea id="reason" name="reason" placeholder="Напишите несколько слов о себе..." required maxlength="1000"></textarea>
 <button class="btn" type="submit">Написать за наградой ♡</button>
 <p class="note">После нажатия откроется чат со мной. Сертификат отправлю лично.</p>
 </form>
@@ -35,8 +33,7 @@ const CHAT_URL = 'https://t.me/agetyperowner';
 document.getElementById('claimForm').addEventListener('submit', event => {
   event.preventDefault();
   const name = document.getElementById('fullName').value.trim();
-  const reason = document.getElementById('reason').value.trim();
-  const message = 'Здравствуйте! Я, ' + name + ', написала за сертификатом. ' + reason;
+  const message = 'Здравствуйте! Я, ' + name + ', написала за сертификатом.';
   window.open(CHAT_URL + '?text=' + encodeURIComponent(message), '_blank', 'noopener');
 });
 </script>
